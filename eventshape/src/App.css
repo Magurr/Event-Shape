@@ -1,0 +1,73 @@
+#root {
+  /* max-width: 1280px;
+  margin: 0 auto; */
+  text-align: center;
+  /* padding: 2rem; */
+  /* background-color: burlywood; */
+}
+.maindiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tab {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  /* max-width: 1280px; */
+  background-color: #191b2b;
+  /* background-color: #4d4d5c; */
+  /* z-index: 1000; */
+}
+.tablinks {
+  width: 30%;
+  background-color: #191b2b;
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  margin: 0px 0px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tablinks.active {
+  /* background-color: rgb(16, 16, 81); */
+  background-color: rgb(22, 73, 131);
+  color: white;
+}
+.tablinks:hover {
+  background-color: #4d4d5c;
+}
+.userMenuList {
+  position: fixed;
+  top: 12%;
+  right: 3%;
+}
+.tabcontent {
+  width: 70%;
+  /* margin: 0 auto; */
+  padding: 40px 10px;
+  border-left: 3px solid rgb(41, 39, 39);
+  border-right: 3px solid rgb(41, 39, 39);
+  border-top: 3px solid rgb(41, 39, 39);
+  border-bottom: 3px solid rgb(41, 39, 39);
+}
+.creatediv {
+  display: flex;
+  justify-content: center;
+  padding-top: 45px;
+}
+.createButton {
+  margin: 10px;
+  /* border-radius: 20px; */
+}
+.createButton :hover {
+  color: pink;
+}
+.createEvent {
+  display: block;
+}

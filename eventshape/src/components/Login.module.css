@@ -1,0 +1,63 @@
+.login_maindiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login_subdiv {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login_button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login_button:hover {
+  background-color: #45a049;
+}
+
+.login_message {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* background: #7d2121; */
+  padding: 10px;
+  /* border: 1px solid #ccc; */
+  z-index: 1;
+  font-family: "Roboto", sans-serif; /* Roboto fontunu kullan */
+  font-size: 16px; /* Font büyüklüğünü ayarla */
+  /* background-color: red; */
+  /* color: #dad4d4; */
+  color: #dad4d4;
+}
+.create_user {
+}
+.create_user_button {
+  display: none;
+  padding: 30px;
+  height: 100%;
+  width: 30%;
+}
