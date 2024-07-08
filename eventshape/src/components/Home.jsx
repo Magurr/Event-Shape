@@ -11,8 +11,15 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
-import avatarImage from "/public/erkek_1.jpg";
 import { initializeApp } from "firebase/app";
+import {
+  AccessAlarm,
+  Search,
+  Notifications,
+  People,
+  Mail,
+} from "@mui/icons-material";
+import HomeIcon from "@mui/icons-material/Home";
 import {
   getStorage,
   ref,
@@ -63,20 +70,6 @@ function Home() {
     setAnchorElUser(null);
   };
 
-  // const handleProfileImage = async () => {
-  //   try {
-  //     const userRef = collection(db, "users"); // Kullanıcı koleksiyonu referansı
-  //     const snapshot = await getDocs(userRef);
-
-  //     snapshot.forEach((doc) => {
-  //       const userData = doc.data();
-  //       if (userData.userName === localStorage.getItem("loggedUser")) {
-
-  //         return;
-  //       }
-  //     });
-  //   } catch {}
-  // };
   useEffect(() => {
     // localStorage'dan userId'yi al
     const currentUser = localStorage.getItem("loggedUser");
@@ -151,20 +144,60 @@ function Home() {
           </Menu>
         </div>
       </div>
-      <div className="creatediv">
-        <a href="#" className="createButton" onClick={openEvent}>
-          <FontAwesomeIcon icon={faUsersRays} size="2x" />
-        </a>
+      <div className="contentMain">
+        <div className="outsideBar">
+          <div className="sideBar">
+            <a href="#">
+              <span>
+                <HomeIcon />
+              </span>
+              <span>Home</span>
+            </a>
+            <a href="#">
+              <span>
+                <Search />
+              </span>
+              <span>Search</span>
+            </a>
+            <a href="#">
+              <span>
+                <Notifications />
+              </span>
+              <span>Notifications</span>
+            </a>
+            <a href="#">
+              <span>
+                <Mail />
+              </span>
+              <span>Messages</span>
+            </a>
 
-        <a href="#" className="createButton">
-          <FontAwesomeIcon icon={faClipboard} size="2x" />
-        </a>
-      </div>
-      <div className="createEvent">
-        {/* {isEventOpen ? (
+            <div>
+              <a href="#">
+                <span>
+                  <People />
+                </span>
+                <span>People</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="content">
+          <div className="creatediv">
+            <a href="#" className="createButton" onClick={openEvent}>
+              <FontAwesomeIcon icon={faUsersRays} size="2x" />
+            </a>
+
+            <a href="#" className="createButton">
+              <FontAwesomeIcon icon={faClipboard} size="2x" />
+            </a>
+          </div>
+          <div className="createEvent">
+            {/* {isEventOpen ? (
           <Event openEvent={openEvent} submitEvent={submitEvent} />
         ) : null} */}
-        {/* {isEventOpen ? (
+            {/* {isEventOpen ? (
           <Event
             // openEvent={openEvent}
             submitEvent={submitEvent}
@@ -172,17 +205,18 @@ function Home() {
             closeEvent={closeEvent}
           />
         ) : null} */}
-        <Event
-          openEvent={openEvent}
-          submitEvent={submitEvent}
-          isEventOpen={isEventOpen}
-          closeEvent={closeEvent}
-        />
-      </div>
-
-      <div className="tabcontent">
-        {activeTab === "event" ? <EventShow /> : null}
-        {activeTab === "post" ? <PostShow /> : null}
+            <Event
+              openEvent={openEvent}
+              submitEvent={submitEvent}
+              isEventOpen={isEventOpen}
+              closeEvent={closeEvent}
+            />
+          </div>
+          <div className="tabcontent">
+            {activeTab === "event" ? <EventShow /> : null}
+            {activeTab === "post" ? <PostShow /> : null}
+          </div>
+        </div>
       </div>
     </div>
   );

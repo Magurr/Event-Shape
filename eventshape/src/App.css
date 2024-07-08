@@ -1,15 +1,24 @@
 #root {
   /* max-width: 1280px;
   margin: 0 auto; */
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  /* text-align: center; */
   /* padding: 2rem; */
-  /* background-color: burlywood; */
+  /* background-color: rgb(167, 138, 101); */
 }
 .maindiv {
-  display: flex;
+  display: block;
+  top: 80px;
+  position: relative;
+  width: 100%;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 .tab {
   position: fixed;
@@ -17,12 +26,15 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  text-align: center;
+  z-index: 5;
   /* max-width: 1280px; */
   background-color: #191b2b;
   /* background-color: #4d4d5c; */
   /* z-index: 1000; */
 }
 .tablinks {
+  /* font-family: 'Roboto'; */
   width: 30%;
   background-color: #191b2b;
   color: white;
@@ -42,24 +54,42 @@
 .tablinks:hover {
   background-color: #4d4d5c;
 }
+.contentMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  right: 5%;
+  position: relative;
+}
 .userMenuList {
   position: fixed;
-  top: 12%;
-  right: 3%;
+  top: 18%;
+  right: 2%;
+}
+.content {
+  max-width: 800px;
+  margin-right: 70px;
 }
 .tabcontent {
-  width: 70%;
+  /* width: 100%; */
+  max-width: 800px;
+  margin: 20px;
+  padding: 15px;
   /* margin: 0 auto; */
-  padding: 40px 10px;
+  /* padding: 30px 5px; */
   border-left: 3px solid rgb(41, 39, 39);
   border-right: 3px solid rgb(41, 39, 39);
   border-top: 3px solid rgb(41, 39, 39);
   border-bottom: 3px solid rgb(41, 39, 39);
 }
 .creatediv {
-  display: flex;
+  text-align: center;
+  /* display: flex;
   justify-content: center;
-  padding-top: 45px;
+  padding-top: 55px; */
 }
 .createButton {
   margin: 10px;
@@ -70,4 +100,47 @@
 }
 .createEvent {
   display: block;
+}
+.outsideBar {
+  position: relative;
+  height: 100vh;
+  /* width: 250px; */
+  min-width: 270px;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-left: 0px;
+}
+.sideBar {
+  z-index: 3;
+  /* margin: 10px;
+  padding: 10px; */
+  border-radius: 10px;
+  position: fixed;
+  top: 17%;
+}
+.sideBar a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(212, 220, 214);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+}
+.sideBar span {
+  padding: 3px;
+}
+
+.sideBar a .icon {
+  margin-right: 10px;
+}
+
+.sideBar a:hover {
+  background-color: #181616;
+  transition: background-color 0.5;
+  /* border-radius: 10px; */
 }

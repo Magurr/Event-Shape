@@ -1,7 +1,8 @@
 :root {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 20px;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -13,6 +14,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+}
 /* a {
   font-weight: 500;
   color: #646cff;

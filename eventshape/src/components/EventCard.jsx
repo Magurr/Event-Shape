@@ -98,9 +98,10 @@ function EventCard({ event }) {
     <div>
       <Card
         sx={{
+          // fontFamily: "Roboto, Arial, sans-serif",
           maxWidth: 600,
           margin: "20px auto",
-          backgroundColor: "rgb(111, 102, 57)",
+          backgroundColor: "rgb(167, 138, 101)",
         }}
       >
         <CardContent>
